@@ -15,27 +15,27 @@ class AddBinary{
 
 	static String addition(String a, String b){
 		StringBuilder sb = new StringBuilder();
-        
-        char carry = '0';
-        
-        int i = a.length() - 1;
-        int j = b.length() - 1;
-        
-        while(i >= 0 || j >= 0){
-            char ac = (i >= 0) ? a.charAt(i--) : '0';
-            char bc = (j >= 0) ? b.charAt(j--) : '0';
-            
-            char ans = add(ac, bc, carry);
-            if(ans > '1') 
-            	carry = '1';
-            else 
-            	carry = '0';
-            sb.append(ans % 2);
-        }
-        if(carry == '1') 
-        	sb.append(carry);
-        return sb.reverse().toString();
-    }
+
+		char carry = '0';
+
+		int i = a.length() - 1;
+		int j = b.length() - 1;
+
+		while(i >= 0 || j >= 0){
+			char ac = (i >= 0) ? a.charAt(i--) : '0';
+			char bc = (j >= 0) ? b.charAt(j--) : '0';
+
+			char ans = add(ac, bc, carry);
+			if(ans > '1') 
+				carry = '1';
+			else 
+				carry = '0';
+			sb.append(ans % 2);
+		}
+		if(carry == '1') 
+			sb.append(carry);
+		return sb.reverse().toString();
+	}
     
     private static char add(char a, char b, char c){
         return (char)(a - '0' + b - '0' + c);
