@@ -14,8 +14,8 @@ import java.util.Scanner;
 class AddBinary{
 
 	private static char add(char a, char b, char c){
-        return (char)(a - '0' + b - '0' + c);
-    }
+        	return (char)(a - '0' + b - '0' + c);
+    	}
     
 	static String addition(String a, String b){
 		StringBuilder sb = new StringBuilder();
