@@ -13,6 +13,10 @@ import java.util.Scanner;
 
 class AddBinary{
 
+	private static char add(char a, char b, char c){
+        return (char)(a - '0' + b - '0' + c);
+    }
+    
 	static String addition(String a, String b){
 		StringBuilder sb = new StringBuilder();
 
@@ -36,10 +40,6 @@ class AddBinary{
 			sb.append(carry);
 		return sb.reverse().toString();
 	}
-    
-    private static char add(char a, char b, char c){
-        return (char)(a - '0' + b - '0' + c);
-    }
 
 	public static void main(String a[]){
 		Scanner sc = new Scanner(System.in);
