@@ -7,15 +7,29 @@ Ex: Given the following strings...
 "(({[]}))", return true
 "{(})", return false
 
-Problem available on leetcode: 
+Problem available on leetcode: https://leetcode.com/problems/valid-parentheses/
 */
 
 import java.util.Scanner;
+import java.util.Stack;
 
 class ValidOrder{
 
 	static boolean validOrder(String str){
-		
+		Stack<Character> st = new Stack<Character>();
+		for (char c : str.toCharArray()){
+			if(c =='(' || c=='[' || c=='{')
+			    st.push(c);
+			else if(c==')' && !st.empty() && st.peek() == '(')
+			    st.pop();
+			else if(c==']' && !st.empty() && st.peek() == '[')
+			    st.pop();
+			else if(c=='}' && !st.empty() && st.peek() == '{')
+			    st.pop();
+			else
+			    return false;
+		} 
+		return st.isEmpty();
 	}
 
 	public static void main(String args[]){
