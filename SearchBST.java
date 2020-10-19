@@ -25,7 +25,7 @@ Ex: Given the tree
       6   9
 and the search value 7 return null.
 
-Problem URL: 
+Problem URL: https://leetcode.com/problems/search-in-a-binary-search-tree/
 */
 import java.util.*;
 
